@@ -1,0 +1,18 @@
+[{
+    "id": "100",
+    "name": "Galaxy S8",
+    "type": "Mobile",
+    "price": "55000"
+},
+{
+    "id": "200",
+    "name": "Dell Vostro",
+    "type": "Laptop",
+    "price": "75000"
+},
+{
+    "id": "300",
+    "name": "LG AC100",
+    "type": "AC",
+    "price": "45000"
+}]
