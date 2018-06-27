@@ -4,13 +4,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.annotation.Order;
 
-@Order(value = 2)
+@Order(value = 1)
 @SpringBootApplication
-public class TuesdayCommandLinerRunner implements CommandLineRunner {
+public class MondayCommandLineRunner implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    System.out.println("TuesdayCommandLinerRunner run()");
+    System.out.println("MondayCommandLinerRunner run()");
   }
 
 }
