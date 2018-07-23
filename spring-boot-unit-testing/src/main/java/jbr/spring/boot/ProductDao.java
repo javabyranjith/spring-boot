@@ -8,7 +8,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ProductDao {
 
-  public List<String> products() {
-    return Arrays.asList("Mobile", "Laptop", "Tablet PC");
+  public List<Product> products() {
+
+    return Arrays.asList(new Product("Samsung galaxy j7", "Mobile", 40000));
   }
 }

@@ -11,11 +11,11 @@ public class ProductService {
   @Autowired
   private ProductDao productDao;
 
-  public List<String> allProducts() {
+  public List<Product> allProducts() {
     return productDao.products();
   }
 
-  public boolean hasProducts(List<String> prods) {
+  public boolean hasProducts(List<Product> prods) {
     return null != prods && !prods.isEmpty() ? true : false;
   }
 }

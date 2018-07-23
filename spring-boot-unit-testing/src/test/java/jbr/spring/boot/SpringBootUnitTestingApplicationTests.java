@@ -28,7 +28,7 @@ public class SpringBootUnitTestingApplicationTests {
 
   @Test
   public void testAll() {
-    when(productService.allProducts()).thenReturn(Arrays.asList("Mobile", "Laptop", "Tablet PC"));
+    when(productService.allProducts()).thenReturn(Arrays.asList(new Product("Samsung galaxy j7", "Mobile", 40000)));
     Assert.assertTrue(productService.hasProducts(productService.allProducts()));
   }
 
