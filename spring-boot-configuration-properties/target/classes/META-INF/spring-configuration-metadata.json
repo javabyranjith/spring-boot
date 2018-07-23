@@ -1,0 +1,70 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "jbr.springboot.UserProperties",
+      "name": "myuser",
+      "type": "jbr.springboot.UserProperties"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties",
+      "name": "myuser.address",
+      "sourceMethod": "getAddress()",
+      "type": "jbr.springboot.UserProperties$Address"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "jbr.springboot.UserProperties$Address",
+      "name": "myuser.address.country",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties$Address",
+      "name": "myuser.address.doorno",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties$Address",
+      "name": "myuser.address.pincode",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties$Address",
+      "name": "myuser.address.state",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties$Address",
+      "name": "myuser.address.street",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties",
+      "name": "myuser.cars",
+      "type": "java.util.List<java.lang.String>"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties",
+      "name": "myuser.firstname",
+      "description": "User's First Name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties",
+      "name": "myuser.lastname",
+      "description": "User's Last Name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties",
+      "name": "myuser.nickname",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "jbr.springboot.UserProperties",
+      "name": "myuser.phone",
+      "type": "java.util.Map<java.lang.String,java.lang.String>"
+    }
+  ]
+}
