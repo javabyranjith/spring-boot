@@ -1,0 +1,1 @@
+create table mysers(name varchar(20),address varchar(30));
