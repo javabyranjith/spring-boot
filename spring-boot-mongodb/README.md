@@ -16,9 +16,4 @@ Install latest MongoDB with Compass Editor
 Download this project from Git and import as Maven Project in Eclipse/STS.
 
 ### STEP 3:
-Run the application in Boot Dashboard.
-
-### STEP 4: Run Junit Testcase
-Run the junit testcase to ensure your application able to communicate to MySQL DB properly.
-
-### STEP 4: Run the application using tomcat server
+Run the application in Boot Dashboard and observe the logs.
