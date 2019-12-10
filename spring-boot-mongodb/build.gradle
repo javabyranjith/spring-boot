@@ -23,10 +23,10 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	runtime('org.springframework.boot:spring-boot-devtools')
+	compile('org.projectlombok:lombok:1.18.10')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
