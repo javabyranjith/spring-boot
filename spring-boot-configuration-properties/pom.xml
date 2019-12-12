@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>jbr.springboot</groupId>
-	<artifactId>spring-boot-configuration-properties</artifactId>
+	<artifactId>springboot-configuration-properties</artifactId>
 	<version>0.1</version>
 	<packaging>jar</packaging>
 
-	<name>spring-boot-configuration-properties</name>
+	<name>springboot-configuration-properties</name>
 	<description>Spring Boot @ConfigurationProperties Annotation Exmaple</description>
 
 	<parent>

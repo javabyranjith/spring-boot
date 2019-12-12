@@ -13,7 +13,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import jbr.springboot.UserProperties.Address;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest()
 public class SpringBootConfigurationPropertiesApplicationTests {
 
   @Value("${myuser.firstname}")

@@ -6,25 +6,14 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
 
 @PropertySource("classpath:users.properties")
 @ConfigurationProperties("myuser")
 public class UserProperties {
-  /**
-   * User's First Name
-   */
   private String firstname;
-
-  /**
-   * User's Last Name
-   */
   private String lastname;
-
   private String nickname;
-
   private Address address;
   private List<String> cars = new ArrayList<>();
   private Map<String, String> phone = new HashMap<>();
