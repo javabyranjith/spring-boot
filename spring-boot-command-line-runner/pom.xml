@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>jbr.spring.boot</groupId>
-	<artifactId>spring-boot-command-line-runner</artifactId>
+	<artifactId>springboot-command-line-runner</artifactId>
 	<version>0.1</version>
 	<packaging>jar</packaging>
 
-	<name>spring-boot-command-line-runner</name>
+	<name>springboot-command-line-runner</name>
 	<description>CommandLineRunner Interface Example</description>
 
 	<parent>
