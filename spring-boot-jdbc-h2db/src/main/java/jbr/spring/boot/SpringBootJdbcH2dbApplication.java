@@ -1,17 +1,16 @@
 package jbr.spring.boot;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import jbr.spring.boot.service.ProductService;
+import lombok.extern.slf4j.Slf4j;
 
 @SpringBootApplication
+@Slf4j
 public class SpringBootJdbcH2dbApplication implements CommandLineRunner {
-  private static final Logger log = LoggerFactory.getLogger(SpringBootJdbcH2dbApplication.class);
 
   @Autowired
   ProductService productService;

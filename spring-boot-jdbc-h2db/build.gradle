@@ -29,6 +29,7 @@ dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-jdbc'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile 'org.flywaydb:flyway-core:5.1.4'
+	compile('org.projectlombok:lombok:1.18.10')
 	
 	runtime 'org.springframework.boot:spring-boot-devtools'
 	runtime 'com.h2database:h2'
