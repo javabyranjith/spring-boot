@@ -8,11 +8,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import jbr.spring.boot.AddProductRunner;
 import jbr.spring.boot.model.Product;
+import lombok.extern.slf4j.Slf4j;
 
 @Repository
+@Slf4j
 public class ProductDao {
-  private static final Logger log = LoggerFactory.getLogger(ProductDao.class);
 
   @Autowired
   ProductRepository productRepository;
