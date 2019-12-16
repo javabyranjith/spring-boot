@@ -12,13 +12,17 @@ import jbr.spring.boot.model.Product;
 public class ProductService {
 
   @Autowired
-  private ProductDao prodDao;
+  private ProductDao productDao;
+
+  public void executeQuery(String query) {
+    productDao.executeQuery(query);
+  }
 
   public void addProduct() {
-    prodDao.addProduct();
+    productDao.addProduct();
   }
 
   public List<Product> getAllProducts() {
-    return prodDao.getAllProducts();
+    return productDao.getAllProducts();
   }
 }
