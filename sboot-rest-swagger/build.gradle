@@ -1,0 +1,33 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'jbr.swagger'
+version = '0.1'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+	implementation 'io.springfox:springfox-core:2.9.2'
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+	
+	runtime('com.h2database:h2')
+	
+	implementation 'org.projectlombok:lombok:1.18.12'
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	runtime('org.springframework.boot:spring-boot-devtools')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	//testCompile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
+}
