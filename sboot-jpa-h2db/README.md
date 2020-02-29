@@ -5,7 +5,7 @@
   4. JPA
 
 ### CONCEPTS/TOPICS COVERED
-  1. 
+  1. CommandLineRunner with Order
   
 ### HOW TO RUN?
 http://localhost:6060/restapi-swagger/

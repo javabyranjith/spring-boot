@@ -31,7 +31,7 @@ public class ProductDao {
 
   public List<Product> getCustomProd(String prodName) {
     log.info("get custom prod start ");
-    return productRepository.customProd(prodName);
+    return null;//productRepository.getCustomProd(prodName);
   }
 
 }

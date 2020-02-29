@@ -23,6 +23,6 @@ public class ProductService {
   }
 
   public List<Product> getCustomProd(String prodName) {
-    return prodDao.getCustomProd(prodName);
+    return null;
   }
 }

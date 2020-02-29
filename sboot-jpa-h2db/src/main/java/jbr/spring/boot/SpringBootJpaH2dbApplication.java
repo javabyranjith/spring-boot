@@ -37,7 +37,7 @@ public class SpringBootJpaH2dbApplication implements CommandLineRunner {
       productService.getAllProducts().forEach(e -> log.info(e.toString()));
 
       log.info("CUSTOM PRODUCTS");
-      productService.getCustomProd("sh").forEach(e -> log.info(e.toString()));
+      //productService.getCustomProd("sh").forEach(e -> log.info(e.toString()));
     };
   }
 }
