@@ -8,7 +8,7 @@
   1. CommandLineRunner with Order
   
 ### HOW TO RUN?
-http://localhost:6060/restapi-swagger/
+Run as SpringBoot Application
 
 ### H2 DB Console
 http://localhost:6060/h2-console
