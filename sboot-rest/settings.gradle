@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'spring-boot-restapi-product'
+rootProject.name = 'sboot-rest'
