@@ -1,4 +1,4 @@
-package jbr.spring.boot.controller;
+package jbr.sboot.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import jbr.spring.boot.model.Product;
-import jbr.spring.boot.service.ProductService;
+import jbr.sboot.model.Product;
+import jbr.sboot.service.ProductService;
 
 @RestController
 public class ProductController {

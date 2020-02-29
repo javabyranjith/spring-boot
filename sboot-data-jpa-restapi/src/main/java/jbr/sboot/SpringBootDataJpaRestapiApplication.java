@@ -1,4 +1,4 @@
-package jbr.spring.boot;
+package jbr.sboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
