@@ -1,4 +1,4 @@
-package jbr.spring.boot.model;
+package jbr.sboot.rest.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

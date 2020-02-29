@@ -1,4 +1,4 @@
-package jbr.spring.boot.service;
+package jbr.sboot.rest.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import jbr.spring.boot.dao.ProductRepository;
-import jbr.spring.boot.model.Product;
+import jbr.sboot.rest.dao.ProductRepository;
+import jbr.sboot.rest.model.Product;
 
 @Service
 public class ProductService {

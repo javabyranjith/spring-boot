@@ -1,8 +1,8 @@
-package jbr.spring.boot.dao;
+package jbr.sboot.rest.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
-import jbr.spring.boot.model.Product;
+import jbr.sboot.rest.model.Product;
 
 public interface ProductRepository extends CrudRepository<Product, String> {
 
