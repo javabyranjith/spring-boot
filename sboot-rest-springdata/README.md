@@ -12,6 +12,7 @@ http://localhost:6060/ </br>
 
 #### Add products (POST method)
 http://localhost:6060/products
+
 ``` json
 {
     "id": "100",
@@ -34,12 +35,15 @@ http://localhost:6060/products
     "price": "45000"
 }
 ```
+
 #### Retrieve products (GET method)
-http://localhost:6060/products/
+http://localhost:6060/products/ </br>
 http://localhost:6060/products/100
 
 #### Update products (PUT method)
 http://localhost:6060/products
+
+``` json
 {
     "id": "300",
     "name": "LG AC100 update",
@@ -47,5 +51,6 @@ http://localhost:6060/products
     "price": "45"
 }
 ```
+
 #### Delete products (DELETE method)
 http://localhost:6060/products/100
