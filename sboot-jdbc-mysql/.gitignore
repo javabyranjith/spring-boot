@@ -1,0 +1,12 @@
+.gradle/
+gradle/
+.settings/
+target/
+bin/
+build/
+**/META-INF/**
+.sts4-cache
+
+
+.project
+.classpath
