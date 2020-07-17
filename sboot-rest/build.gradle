@@ -1,18 +1,26 @@
-
-
 plugins {
+ 	id 'org.springframework.boot' version '2.2.4.RELEASE'
     id 'java'
 }
+
+apply plugin: 'io.spring.dependency-management'
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 repositories {
-    jcenter()
+	mavenCentral()
 }
 
 dependencies {
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.0.0.RELEASE', ext: 'pom'
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.0.RELEASE'
-    testImplementation 'junit:junit:4.12'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	
+	runtime('com.h2database:h2')
+	
+	implementation 'org.projectlombok:lombok:1.18.12'
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	runtime('org.springframework.boot:spring-boot-devtools')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

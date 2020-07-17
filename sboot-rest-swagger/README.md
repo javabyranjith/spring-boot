@@ -23,9 +23,12 @@ copy the response and paste @ https://editor.swagger.io/
 ### **View Swagger UI**
 * http://localhost:6060/restapi-swagger/swagger-ui.html
 
-### **RESTApi Response**
-* http://localhost:6060/restapi-swagger/products
-* http://localhost:6060/restapi-swagger/products/100
+### **REST End-points**
+* GET: http://localhost:6060/restapi-swagger/products
+* GET: http://localhost:6060/restapi-swagger/products/{id}
+* POST: http://localhost:6060/restapi-swagger/addProduct
+* PUT: http://localhost:6060/restapi-swagger/updateProduct/{id}
+* DELETE: http://localhost:6060/restapi-swagger/deleteProduct/{id}
 
 ### TEST CUSTOM EXCEPTIONS
 #### CustomExceptionGlobalHandler.handleMethodArgumentNotValid(); - Choose POST method in POSTMAN

@@ -83,9 +83,7 @@ public class ProductController {
     try {
       productService.addProduct(product);
       HttpHeaders headers = new HttpHeaders();
-      headers.setLocation(builder.path("/addProduct")
-          .buildAndExpand(product.getId())
-          .toUri());
+      headers.setLocation(builder.path("/addProduct").buildAndExpand(product.getId()).toUri());
       return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     } catch (ProductExistsException ex) {
       throw new ResponseStatusException(HttpStatus.BAD_REQUEST, ex.getMessage());

@@ -3,13 +3,19 @@ package jbr.springboot.restapi.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import jbr.springboot.restapi.model.Product;
+import jbr.springboot.restapi.model.ProductApiResponse;
 import jbr.springboot.restapi.service.ProductService;
 
 /**
@@ -19,33 +25,37 @@ import jbr.springboot.restapi.service.ProductService;
  * @since 2018, Jun 20
  */
 @RestController
+@CrossOrigin(origins = "*")
+@RequestMapping("/product")
 public class ProductController {
 
   @Autowired
   private ProductService productService;
 
-  @RequestMapping("/products")
-  public List<Product> getAllProducts() {
-    return productService.getAllProducts();
+  @GetMapping("/all")
+  public ProductApiResponse<List<Product>> getAllProducts() {
+    return new ProductApiResponse<>(HttpStatus.OK.value(), "All products are retrieved successfully.",
+        productService.getAllProducts());
   }
 
-  @RequestMapping("/products/{id}")
-  public Product getProductById(@PathVariable String id) {
-    return productService.getProductById(id);
+  @GetMapping("/{id}")
+  public ProductApiResponse<Product> getProductById(@PathVariable String id) {
+    return new ProductApiResponse<Product>(HttpStatus.OK.value(), "Product retrieved successfully.",
+        productService.getProductById(id));
   }
 
-  @RequestMapping(method = RequestMethod.POST, value = "/products")
+  @PostMapping("/add")
   public void addProduct(@RequestBody Product product) {
     productService.addProduct(product);
   }
 
-  @RequestMapping(method = RequestMethod.PUT, value = "/products/{id}")
+  @PutMapping(value = "/update/{id}")
   public void updateProduct(@RequestBody Product product, @PathVariable String id) {
     productService.updateProduct(product, id);
   }
 
-  @RequestMapping(method = RequestMethod.DELETE, value = "/products/{id}")
+  @DeleteMapping("/delete/{id}")
   public void deleteProduct(@PathVariable String id) {
-    productService.delete(id);
+    productService.deleteProduct(id);
   }
 }

@@ -1,0 +1,16 @@
+server:
+  servlet:
+    context-path: /springboot-restapi
+  port: 6060
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: ranjith
+    password: sekar
+    
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
