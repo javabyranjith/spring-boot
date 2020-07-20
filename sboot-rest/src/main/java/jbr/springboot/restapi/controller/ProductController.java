@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import jbr.springboot.restapi.model.Product;
 import jbr.springboot.restapi.model.ProductApiResponse;
+import jbr.springboot.restapi.model.ProductDto;
 import jbr.springboot.restapi.service.ProductService;
 
 /**
@@ -45,17 +46,20 @@ public class ProductController {
   }
 
   @PostMapping("/add")
-  public void addProduct(@RequestBody Product product) {
-    productService.addProduct(product);
+  public ProductApiResponse<Product> addProduct(@RequestBody ProductDto productDto) {
+    return new ProductApiResponse<Product>(HttpStatus.OK.value(), "Product added successfully.",
+        productService.addProduct(productDto));
   }
 
-  @PutMapping(value = "/update/{id}")
-  public void updateProduct(@RequestBody Product product, @PathVariable String id) {
-    productService.updateProduct(product, id);
+  @PutMapping(value = "/update")
+  public ProductApiResponse<ProductDto> updateProduct(@RequestBody ProductDto productDto) {
+    return new ProductApiResponse<ProductDto>(HttpStatus.OK.value(), "Product updated successfully.",
+        productService.updateProduct(productDto));
   }
 
   @DeleteMapping("/delete/{id}")
-  public void deleteProduct(@PathVariable String id) {
+  public ProductApiResponse<Void> deleteProduct(@PathVariable String id) {
     productService.deleteProduct(id);
+    return new ProductApiResponse<Void>(HttpStatus.OK.value(), "Product deleted successfully.", null);
   }
 }

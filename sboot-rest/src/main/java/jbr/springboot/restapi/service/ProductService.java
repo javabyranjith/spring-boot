@@ -3,6 +3,7 @@ package jbr.springboot.restapi.service;
 import java.util.List;
 
 import jbr.springboot.restapi.model.Product;
+import jbr.springboot.restapi.model.ProductDto;
 
 /**
  * Product Service.
@@ -15,9 +16,9 @@ public interface ProductService {
 
   Product getProductById(String id);
 
-  void addProduct(Product product);
+  Product addProduct(ProductDto productDto);
 
-  void updateProduct(Product product, String id);
+  ProductDto updateProduct(ProductDto productDto);
 
   void deleteProduct(String id);
 }
