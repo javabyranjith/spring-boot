@@ -10,8 +10,8 @@
 ### HOW TO RUN?  (use POSTMAN Client)
 http://localhost:6060/ </br>
 
-#### Add products (POST method)
-http://localhost:6060/products
+### Add products
+POST: http://localhost:6060/products/all
 
 ``` json
 {
@@ -36,12 +36,11 @@ http://localhost:6060/products
 }
 ```
 
-#### Retrieve products (GET method)
-http://localhost:6060/products/ </br>
-http://localhost:6060/products/100
+### Retrieve products
+GET: http://localhost:6060/products/100
 
-#### Update products (PUT method)
-http://localhost:6060/products
+### Update products
+PUT: http://localhost:6060/update
 
 ``` json
 {
@@ -52,5 +51,5 @@ http://localhost:6060/products
 }
 ```
 
-#### Delete products (DELETE method)
-http://localhost:6060/products/100
+#### Delete products
+DELETE: http://localhost:6060/products/delete/100
