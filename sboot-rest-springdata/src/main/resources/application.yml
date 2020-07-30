@@ -1,6 +1,4 @@
 server:
-  servlet:
-    context-path: /springboot-rest-springdata
   port: 6060
   error:
     include-stacktrace: never

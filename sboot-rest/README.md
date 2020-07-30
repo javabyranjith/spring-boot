@@ -6,25 +6,27 @@
 
 ### CONCEPTS/TOPICS COVERED
   1. CRUD Operations with H2DB. 
+  2. Customized REST API Response.
+  3. JUnit Test for Rest Controller using RestTemplate
 
 ### HOW TO RUN?  (use POSTMAN Client)
-## RESTApi End-points
-* GET: http://localhost:6060/springboot-restapi/product/all
-* GET: http://localhost:6060/springboot-restapi/product/{id}
-* POST: http://localhost:6060/springboot-restapi/product/add
-* PUT: http://localhost:6060/springboot-restapi/product/update
-* DELETE: http://localhost:6060/springboot-restapi/product/delete/{id}
-
 ### H2 DB Console
 http://localhost:6060/springboot-restapi/h2-console
 
+## RESTApi End-points
+* GET: http://localhost:6060/springboot-restapi/products/all
+* GET: http://localhost:6060/springboot-restapi/products/{id}
+* POST: http://localhost:6060/springboot-restapi/products/add
+* PUT: http://localhost:6060/springboot-restapi/products/update
+* DELETE: http://localhost:6060/springboot-restapi/products/delete/{id}
+
 ### API Operations
 ## GET PRODUCT
-* GET: http://localhost:6060/springboot-restapi/product/all
-* GET: http://localhost:6060/springboot-restapi/product/100
+* GET: http://localhost:6060/springboot-restapi/products/all
+* GET: http://localhost:6060/springboot-restapi/products/100
 
 ## ADD PRODUCT
-* POST http://localhost:6060/springboot-restapi/product/add
+* POST http://localhost:6060/springboot-restapi/products/add
 ``` json
 {
   "id": "700",
@@ -35,7 +37,7 @@ http://localhost:6060/springboot-restapi/h2-console
 ```
 
 ## UPDATE PRODUCT
-* PUT: http://localhost:6060/springboot-restapi/product/update
+* PUT: http://localhost:6060/springboot-restapi/products/update
 ``` json
 {
   "id": "700",
@@ -46,4 +48,9 @@ http://localhost:6060/springboot-restapi/h2-console
 ```
 
 ## DELETE PRODUCT
-* DELETE: http://localhost:6060/springboot-restapi/product/delete/200
+* DELETE: http://localhost:6060/springboot-restapi/products/delete/200
+
+
+### TESTING
+1. Start the Springboot application
+2. ProductServiceTest.java -> Run As -> Junit Application

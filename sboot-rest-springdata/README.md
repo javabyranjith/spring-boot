@@ -8,10 +8,13 @@
   1. CRUD Operations with Spring Data API.
 
 ### HOW TO RUN?  (use POSTMAN Client)
-http://localhost:6060/ </br>
+
+### Retrieve products
+* GET: http://localhost:6060/api/products/all
+* GET: http://localhost:6060/api/products/100
 
 ### Add products
-POST: http://localhost:6060/products/all
+POST: http://localhost:6060/api/products/add
 
 ``` json
 {
@@ -36,11 +39,8 @@ POST: http://localhost:6060/products/all
 }
 ```
 
-### Retrieve products
-GET: http://localhost:6060/products/100
-
 ### Update products
-PUT: http://localhost:6060/update
+PUT: http://localhost:6060/api/products/update
 
 ``` json
 {
@@ -52,4 +52,4 @@ PUT: http://localhost:6060/update
 ```
 
 #### Delete products
-DELETE: http://localhost:6060/products/delete/100
+DELETE: http://localhost:6060/api/products/delete/100
