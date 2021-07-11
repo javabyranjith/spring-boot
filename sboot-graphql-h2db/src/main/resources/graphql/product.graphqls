@@ -1,0 +1,15 @@
+type Query {
+  findAllProducts: [Product]
+  findProductById(id: Long): Product
+}
+
+type Product{
+  id: Long
+  name: String
+  category: String
+  price: Long
+}
+
+type Mutation {
+  newProduct(name: String, category: String, price: Long) : Product
+}

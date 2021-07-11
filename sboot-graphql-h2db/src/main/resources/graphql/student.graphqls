@@ -1,0 +1,15 @@
+type Query {
+  getAllStudents: [Student]
+}
+
+type Student {
+  id: Long
+  name: String
+  department: String
+  address: Address
+  phone: Long
+}
+
+type Mutation {
+  addStudent(name: String, department: String, address: Address, phone: Long): Student
+}

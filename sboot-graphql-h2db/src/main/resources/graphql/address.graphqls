@@ -1,0 +1,14 @@
+type Query {
+  getAddress(studid: Long): Address
+}
+
+type Address {
+  studid: Long
+  street: String
+  city: String
+  pincode: Long
+}
+
+type Mutation {
+  addAddress(stud_id: Long, street: String, city: String, pincode: Long): Address
+}
