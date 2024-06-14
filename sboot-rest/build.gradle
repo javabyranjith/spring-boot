@@ -1,26 +1,83 @@
 plugins {
- 	id 'org.springframework.boot' version '2.2.4.RELEASE'
-    id 'java'
+	id 'java'
+	id 'org.springframework.boot' version '3.2.2'
+	id 'io.spring.dependency-management' version '1.1.4'
+	id "jacoco"	
 }
 
-apply plugin: 'io.spring.dependency-management'
+group = 'jbr.sboot'
+version = '0.1'
+sourceCompatibility = '17'
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
 
 repositories {
 	mavenCentral()
+	jcenter()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.apache.commons:commons-lang3:3.13.0'
+	implementation 'org.apache.commons:commons-collections4:4.1'
 	
-	runtime('com.h2database:h2')
+	runtimeOnly 'org.postgresql:postgresql'
 	
-	implementation 'org.projectlombok:lombok:1.18.12'
+	compileOnly 'org.projectlombok:lombok'
+	
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	annotationProcessor 'org.projectlombok:lombok'
+	
+	testAnnotationProcessor 'org.projectlombok:lombok'
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	runtime('org.springframework.boot:spring-boot-devtools')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testImplementation 'junit:junit'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed" //, "standardOut", "standardError"
+    }
+    finalizedBy jacocoTestReport // report is always generated after tests run
+}
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+    reports {
+        xml.required = false
+        csv.required = false
+        html.required = true
+        html.destination layout.buildDirectory.dir('jacocoHtml').get().asFile
+    }
+    afterEvaluate {
+    	classDirectories.from = files(classDirectories.files.collect {
+        	fileTree(dir: it, exclude: [
+            	'**/model/**.class',
+            	'**/common/**.class',
+            	'**/dto/**.class',
+            	'**/enums/**.class',
+            	'**/util/**.class',
+            	'**/exception/**.class',
+            	'**/entity/**.class'
+            ])
+        })
+    }
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 1
+            }
+        }
+    }
 }

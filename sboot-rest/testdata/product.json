@@ -1,0 +1,10 @@
+1) ADD PRODCUT
+http://localhost:6060/sboot-restapi/api/product/add
+{
+    name: 'Redmi 6A',
+    category: 'Mobile',
+    price: 6000
+}
+
+2) GET ALL PRODUCTS
+http://localhost:6060/sboot-restapi/api/product/all

@@ -7,16 +7,13 @@ spring:
       base-path: /sboot-restapi/api
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-#    hibernate:
-#      ddl-auto: update
+    hibernate:
+      ddl-auto: update
     show-sql: true
-  
   datasource:
     url: "jdbc:postgresql://localhost:5432/springboot"
     username: ranjith
     password: Sekar@123
-    hikari:
-      schema: sboot_restapi
     
 logging:
   file:
